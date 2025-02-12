@@ -1,7 +1,6 @@
 import socket
 from os import system
 
-
 #Lijstje met kleurcoderingen voor weergave van poorten
 class style():
   ROOD = '\033[31m'
@@ -15,6 +14,19 @@ clear = lambda: system('clear')
 clear()
 
 #INTRODUCTIE
+print(r"""
+
+___  ___     _       _       
+|  \/  |    | |     (_)      
+| .  . | ___| |_   ___ _ __  
+| |\/| |/ _ \ \ \ / / | '_ \ 
+| |  | |  __/ |\ V /| | | | |
+\_|  |_/\___|_| \_/ |_|_| |_|
+                             
+                             
+
+
+                """)
 print(f"{style.DIK}Welkom bij de fontys poortsniffer 3000{style.RESET}")
 
 #Vraag om IP
@@ -58,3 +70,4 @@ print("------------------------------------")
 for open in open_poorten:
   print(f"Poort - {style.GROEN}{open}{style.RESET}")
   print("------------------------------------")
+
