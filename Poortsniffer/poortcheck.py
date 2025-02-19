@@ -12,7 +12,6 @@ class style():
 #Maak de terminal schoon
 clear = lambda: system('clear') 
 clear()
-
 #Open poorten worden verzameld voor samenvatting
 open_poorten = []
 

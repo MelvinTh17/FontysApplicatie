@@ -1,8 +1,10 @@
 import dns.resolver
-
+from tabulate import tabulate
+import time
+from os import system
 
 def check_domein(domein):
-
+    datalijst = []
     records = [
         'NONE',
         'A',
@@ -21,6 +23,7 @@ def check_domein(domein):
         'MINFO',
         'MX',
         'TXT',
+        #COPYRIGHT MELVIN 2024
         'RP',
         'AFSDB',
         'X25',
@@ -73,15 +76,24 @@ def check_domein(domein):
         'TA',
         'DLV',
     ]
-    
+    clear()
     for rec in records:
         try:
             antwoord = dns.resolver.resolve(domein, rec)
             for rdata in antwoord:
-                print(rec, ':', rdata.to_text())
+                datalijst.append([rec, rdata.to_text()])
+                
         except:
             quit
-    
+
+
+    print(tabulate(datalijst, headers=['Type', 'Data'], tablefmt="grid"))
 
 if __name__ == '__main__':
-    check_domein('fontys.nl')
+    clear = lambda: system('clear') 
+    clear()
+    print("Hoi! Welkom bij de DNS resolver. Het programma is even aan het opstarten")
+    time.sleep(5)
+    print("\n \n \n")
+    domein = input("Welk domein wil je checken?: ")
+    check_domein(domein)
