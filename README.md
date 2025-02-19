@@ -12,8 +12,6 @@ De opdrachten zijn opgedeeld in mappen. Elke map bevat:
 
 ## Roadmap
 
-- Domain Name System
-
 - Diskgebruik
 
 - Automailer
