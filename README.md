@@ -7,7 +7,6 @@ Op deze github zal je alle applicatie opdrachten van Infra semester 2 vinden.
 
 De opdrachten zijn opgedeeld in mappen. Elke map bevat:
 - Source code
-- Gecompileerde code
 - Documentatie
 
 
